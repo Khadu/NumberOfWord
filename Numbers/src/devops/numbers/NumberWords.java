@@ -12,7 +12,9 @@ public class NumberWords {
 
 		if(n==0)
 		{
-			str=str.concat("Exiting the System");
+			System.out.println("Exiting the System");
+
+			System.exit(1);
 
 		}
 		else if (n < 0)
@@ -39,7 +41,7 @@ public class NumberWords {
 			str=str.concat(a.pw(((n / 100) % 10), " hundred"));
 			str=str.concat(a.pw((n % 100), " "));
 		}
-//		System.out.println("result str "+str);
+		System.out.println(str.trim());
 		return str.trim() ;
 	}
 

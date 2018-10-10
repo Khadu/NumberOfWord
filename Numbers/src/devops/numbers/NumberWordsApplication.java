@@ -23,17 +23,17 @@ public final class NumberWordsApplication {
 		if (n > 19)
 		{
 			result=result.concat(ten[n / 10]+one[n % 10]);
-			System.out.print(ten[n / 10]+ one[n % 10]);
+//			System.out.print(ten[n / 10]+ one[n % 10]);
 		}
 		else
 		{
 			result=result.concat(one[n]);
 
-			System.out.print(one[n]);
+//			System.out.print(one[n]);
 		}
 		if (n > 0)
 			result=result.concat(ch);
-			System.out.print(ch);
+//			System.out.print(ch);
 			
 		return result;
 	}
@@ -61,11 +61,13 @@ public final class NumberWordsApplication {
 	}
 
 	public static void main(String[] args) {
+		
+		System.out.println("Running Test Cases");
 		Result result = JUnitCore.runClasses(NumberWordsTests.class);					
 		for (Failure failure : result.getFailures()) {							
 			System.out.println(failure.toString());					
 		}		
-		System.out.println("Result=="+result.wasSuccessful());
+		System.out.println("Result = "+result.wasSuccessful());
 		new NumberWordsApplication().execute() ;
 		
 	}

@@ -21,10 +21,10 @@ public class NumberWordsTests {
 	public void properNUmber() {
 		Assert.assertEquals( "Success", "Forty Five", numberWords.toWords(45) ) ;
 	}	
-	@Test
-	public void exitCommand() {
-		Assert.assertEquals( "Success", "Exiting the System", numberWords.toWords(0) ) ;
-	}	
+//	@Test
+//	public void exitCommand() {
+//		Assert.assertEquals( "Success", "Exiting the System", numberWords.toWords(0) ) ;
+//	}	
 	
 	
 
