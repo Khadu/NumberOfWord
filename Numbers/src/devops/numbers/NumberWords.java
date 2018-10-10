@@ -1,10 +1,46 @@
 package devops.numbers;
 
-public class NumberWords {
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
 
-	public String toWords( int number ) {
-		String result = "" ;
-		return result.trim() ;
+public class NumberWords {
+	
+
+	public String toWords( int n ) {
+		String str="";
+
+		if(n==0)
+		{
+			str=str.concat("Exiting the System");
+
+		}
+		else if (n < 0)
+		{
+			
+			str=str.concat("Number out of range");
+
+//			System.out.println("Enter numbers greater than 0");
+		}
+		else if (n>200000000)
+		{
+			
+			str=str.concat("Number out of range");
+
+//			System.out.println("Enter numbers greater than 0");
+		}
+		else
+		{
+			NumberWordsApplication a = new NumberWordsApplication();
+			str=str.concat(a.pw((n / 1000000000), " Hundred"));
+			str=str.concat(a.pw((n / 10000000) % 100, " crore"));
+			str=str.concat(a.pw(((n / 100000) % 100), " lakh"));
+			str=str.concat(a.pw(((n / 1000) % 100), " thousand"));
+			str=str.concat(a.pw(((n / 100) % 10), " hundred"));
+			str=str.concat(a.pw((n % 100), " "));
+		}
+//		System.out.println("result str "+str);
+		return str.trim() ;
 	}
 
 }
